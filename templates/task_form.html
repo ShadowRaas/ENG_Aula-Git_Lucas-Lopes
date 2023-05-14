@@ -1,0 +1,14 @@
+<form method="POST">
+  {% csrf_token %}
+  <div>
+    <label>Título do interesse</label>
+    <input type="text" name="title" value="{{ task.title }}">
+  </div>
+  <div>
+    <label>Descrição do interesse</label>
+    <textarea name="description">
+    {{ task.description }}
+      </textarea>
+  </div>
+  <input type="submit" value="Add Task">
+</form>

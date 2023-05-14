@@ -1,0 +1,93 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lucas Ferreira de Andrade Lopes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+  <header>
+  <h1>Apresentação do Lucas Lopes</h1>
+  <nav>
+    <ul>
+      <li><a href="#Sobre-mim">Sobre mim</a></li>
+      <li><a href="#Habilidades">Habilidades</a></li>
+      <li><a href="#Contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+  <section id="Sobre-mim">
+   <p>Olá,me chamo Lucas Lopes. Em 2023 completo 20 anos no dia 25 de Abril. Sou estudante de computação e gosto muito do tema.</p>
+  <p>Para saber mais sobre mim, visite meu perfil no LinkedIn:</p>
+  <button style="background-color: #61b3ff; color: #fff; padding: 10px 20px; border: none; border-radius: 5px;"><a href="https://www.linkedin.com/in/lucas-lopes-430554255/" target="_blank">Perfil do Lucas</a></button>
+  </section>
+  <p></p>
+  
+  <section id="Habilidades">
+  <h2>Interesses</h2>
+    <p>Aqui estão alguns dos meus interesses:</p>
+
+
+    
+  </section>
+  <div style="h3: url('{% static 'css/style.css' %}')">
+  <h3>-Lista de interesses:</h3> </div>
+    <ol>
+  {% for task in tasks %}
+    <li>{{ task.title }}
+      <a href='/tasks/edit/{{task.id}}'>editar</a>
+      <a href='/tasks/delete/{{task.id}}'>remover</a>
+      <ul>
+        <li>
+          {{ task.description }}
+        </li>
+      </ul>
+    </li>
+  {% endfor %}
+  </ol>
+
+  <a href="{% url 'new_task' %}">Adicionar interesse</a>
+
+<p></p>
+  
+  
+   <img src="https://neilpatel.com/wp-content/uploads/2017/12/codigos-html-para-paginas-web.jpeg" width="300px" alt="Foto do Aquiles">
+  <h4>-Meu cachorro Aquiles:</h4>
+  <p>Aquiles, ao contrário do nome, é um cachorro pequeno e bem fofo da raça Shi-Tzu.</p>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHNs5QBQbp1QdSpYDFgtKyp_JgWNU3wravhJFvh75yoj3ppvQo5qTjKLFoxNuqkzlklBlK1ox18roVc8rlg3KzDZSxsWcivCzFkCy4BDsEwNDQAye0TF-HgP43PPTNXW-Sy7Cqe1mBHYvrO3LRbiqW2PeagCZocOrvgpM1AqVDpKokgEG6WiafoxyS/s1102/Shih%20Tzu%20preto%20e%20branco.jpg" width="300px" alt="Foto do Aquiles">
+  <section id="Contato">
+  <h3>
+     -Tabela de informações de contato:
+  </h3>
+  
+	<table>
+		<tr>
+			<th>Nome</th>
+			<th>Sobrenome</th>
+			<th>Email</th>
+      <th>Telefone</th>
+      <th>Curso</th>
+      <th>Matrícula</th>
+      
+		</tr>
+		<tr>
+			<td>Lucas</td>
+			<td>Lopes</td>
+			<td>lucasfalopes66@gmail.com</td>
+      <td>(21)99567-8612</td>
+      <td>Engenharia da computação</td>
+      <td>2220647</td>
+    </tr>
+  </table>
+  <p></p>
+  <p></p>
+  <p></p>
+  </section>
+</body>
+
+</html>

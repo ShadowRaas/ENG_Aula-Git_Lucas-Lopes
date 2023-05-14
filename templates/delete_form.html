@@ -1,0 +1,5 @@
+<form method='POST'>
+  {% csrf_token %}
+  Você tem certeza que deseja alterar a tarefa de id = {{ task.id }}
+  <input type='submit' name= 'confirm' value='Sim'>
+  <input type='submit' value='Não'>
