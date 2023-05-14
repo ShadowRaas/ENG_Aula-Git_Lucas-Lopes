@@ -15,14 +15,14 @@ secrets.token_urlsafe(32)
 python3 manage.py startapp nome_do_seu_app
 '''
 
-# Fazer migrações
+# Fazer migrações:
 - Na shell:
 """
 python manage.py makemigrations
 python manage.py migrate
 """
 
-# Criar Super User
+# Criar Super User:
 - Na shell:
 '''
 python manage.py createsuperuser
